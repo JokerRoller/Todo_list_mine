@@ -127,12 +127,11 @@ function getTodo(e) {
 function deleteTodo(e) {
     let todos = JSON.parse(localStorage.getItem('todos'));
     let todos2 = JSON.parse(localStorage.getItem('todosstyle'));
-    // Delete input in local storage
-    todos.splice(todos.indexOf(e), 1);
-    localStorage.setItem('todos', JSON.stringify(todos));
-    // Delete style in local storage
     let position = todos.indexOf(e);
+    console.log(position);
+    todos.splice(position, 1);
     todos2.splice(position, 1);
+    localStorage.setItem('todos', JSON.stringify(todos));
     localStorage.setItem('todosstyle', JSON.stringify(todos2));
 }
 // Change style in local storage
