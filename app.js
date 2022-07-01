@@ -128,7 +128,6 @@ function deleteTodo(e) {
     let todos = JSON.parse(localStorage.getItem('todos'));
     let todos2 = JSON.parse(localStorage.getItem('todosstyle'));
     let position = todos.indexOf(e);
-    console.log(position);
     todos.splice(position, 1);
     todos2.splice(position, 1);
     localStorage.setItem('todos', JSON.stringify(todos));
